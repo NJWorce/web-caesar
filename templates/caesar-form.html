@@ -5,7 +5,12 @@
         Rotate by:
         <input type = 'text' name = 'rot' value="0" />
     </label>
-        <input type='textarea' name='text' />
+    {% if rotated_string|length == 0 %}
+
+        <textarea name='text'></textarea>
+    {% else %}
+        <textarea name='text'>{{rotated_string}}</textarea>
+    {% endif %}
         <input type='submit' value="Submit"/>
     </form>
     <hr/>
